@@ -14,6 +14,22 @@ O software foi estruturado seguindo o padrão de três camadas, garantindo a sep
 
 ---
 
+## 🗄️ Configuração do Banco de Dados
+
+Para que o sistema funcione corretamente, é necessário replicar a estrutura do banco de dados localmente. Siga os passos abaixo:
+
+1. **Localize o Script**: O arquivo de criação está disponível em `script_banco.sql`.
+2. **Execute no SQL Server**: 
+   * Abra o seu **SQL Server Management Studio (SSMS)**.
+   * Conecte-se à sua instância local.
+   * Abra o arquivo de script e execute-o (F5) para criar o banco de dados `SALATIEL` e as tabelas `Aluno`, `Professor`, `Disciplina` e `Produto`.
+3. **Verifique a Conexão**:
+   * No projeto **FrontDesktop**, abra o arquivo `App.config`.
+   * Certifique-se de que a `connectionString` chamada `"DEV"` possui o nome correto do seu servidor (ex: `Data Source=SEU_PC\SQLEXPRESS`).
+   * O nome do banco de dados inicial deve coincidir com o nome criado pelo script.
+
+---  
+
 ## 🛠️ Tecnologias e Configurações
 
 *   **Linguagem**: C# (.NET Framework).
